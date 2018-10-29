@@ -20,22 +20,22 @@ class ProfileViewer extends Component {
    * Handler validation's button.
    */
   handleClick() {
-    this.setState({ buttonClicked: true });
+    this.setState({ buttonClicked: !this.state.buttonClicked });
   }
 
   render() {
     return (
       <main role="main" className="container">
-        <div className="row">
-          <div className="col">
-            <div className="headerLogged">Logged as Mery.</div>
-          </div>
+        <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <p class="navbar-text">Signed in as Mery</p>
         </div>
+        </nav>
 
         <div className="row">
           <div className="col">
             <div className="photo">
-              <img src={girlUser} alt="Mery" />
+              <img className="img-thumbnail" src={girlUser} alt="Mery" />
             </div>
           </div>
         </div>
@@ -71,31 +71,32 @@ class ProfileViewer extends Component {
         </div>
 
         { this.state.buttonClicked
-          &&
-          <div className="row">
-            <div className="col">
-              <div className="askForValidations">
-                <div className="row">
-                  <div className="col">
-                    <input type="text" placeholder="Company's name or user's name" />
+          && (
+            <div className="row">
+              <div className="col">
+                <div className="askForValidations">
+                  <div className="row">
+                    <div className="col">
+                      <input type="text" placeholder="Company's name or user's name" />
+                    </div>
                   </div>
-                </div>
 
-                <div className="row">
-                  <div className="col">
-                    <input type="text" placeholder="Aptitude" />
+                  <div className="row">
+                    <div className="col">
+                      <input type="text" placeholder="Aptitude" />
+                    </div>
                   </div>
-                </div>
 
-                <div className="row">
-                  <div className="col">
-                    <button>Send</button>
+                  <div className="row">
+                    <div className="col">
+                      <button>Send</button>
+                    </div>
                   </div>
-                </div>
 
+                </div>
               </div>
             </div>
-          </div>
+          )
         }
       </main>
     );
