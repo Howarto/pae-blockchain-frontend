@@ -10,7 +10,7 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Route path="/users/mery" component={ ProfileViewer } />
-          <Route path="/companies/everos" component={ CompanyProfileViewer } />
+          <Route path="/companies/everos/sendcv" component={ CompanyProfileViewer } />
         </div>
       </BrowserRouter>
     );

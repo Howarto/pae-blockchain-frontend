@@ -20,7 +20,8 @@ class CompanyProfileViewer extends Component {
    * Handler validation's button.
    */
   handleClick() {
-    this.setState({ buttonClicked: !this.state.buttonClicked });
+    this.setState({ buttonClicked: true });
+    // Send in blockchain a transaction to the company account.
   }
 
   render() {
@@ -28,7 +29,7 @@ class CompanyProfileViewer extends Component {
       <main role="main" className="container">
         <nav class="navbar navbar-default">
           <div class="container-fluid">
-            <p class="navbar-text">Signed in as Everos</p>
+            <p class="navbar-text">Signed in as Mery</p>
           </div>
         </nav>
 
@@ -64,9 +65,21 @@ class CompanyProfileViewer extends Component {
 
         <div className="row">
           <div className="col">
-            <div className="validations" />
+            <div className="send-cv">
+              <button onClick={this.handleClick}>Send CV</button>
+            </div>
           </div>
         </div>
+
+        {this.state.buttonClicked && (
+          <div className="row">
+            <div className="col">
+              <div className="send-cv">
+                <p>Sended!</p>
+              </div>
+            </div>
+          </div>
+        )}
       </main>
     );
   }
