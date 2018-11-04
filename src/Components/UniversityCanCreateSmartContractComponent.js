@@ -6,7 +6,7 @@ import Globals from '../Utils/Globals';
 import UserLooksValidationComponent from './UserLooksValidationComponent';
 import fib from '../fib.jpg';
 
-class Test extends Component {
+class UniversityCanCreateSmartContractComponent extends Component {
   constructor(props) {
     super(props);
 
@@ -47,7 +47,7 @@ class Test extends Component {
       <main role="main" className="container">
         <nav className="navbar navbar-default">
           <div className="container-fluid">
-            <p className="navbar-text">Signed in as Mery</p>
+            <p className="navbar-text">Signed in as FIB</p>
           </div>
         </nav>
 
@@ -68,8 +68,11 @@ class Test extends Component {
           </div>
         </div>
 
-        <button onClick={ this.handleClickCreateSmartContract } >Create smart contract</button>
-        <button onClick={ this.handleClickPassedSubject } >The student pass one subject more!</button>
+        <div style={{backgroundColor: 'palevioletred'}}>
+          <h3>Mery send you a enrolment request</h3>
+          <button onClick={ this.handleClickCreateSmartContract } >Create smart contract</button>
+          <button onClick={ this.handleClickPassedSubject } >The student pass one subject more!</button>
+        </div>
 
         <div className="row">
           <div className="col">
@@ -92,4 +95,4 @@ class Test extends Component {
   }
 }
 
-export default Test;
+export default UniversityCanCreateSmartContractComponent;

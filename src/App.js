@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Test from './Components/Test';
+import UniversityCanCreateSmartContractComponent from './Components/UniversityCanCreateSmartContractComponent';
 import ProfileViewer from './Components/ProfileComponent';
 import UserLooksValidationComponent from './Components/UserLooksValidationComponent';
 import CompanyProfileComponent from './Components/CompanyProfileComponent';
@@ -12,11 +12,11 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <Route path="/" component={ Test } exact />
           <Route path="/users/mery/lookcv" component={ ProfileViewer } />
           <Route path="/users/mery/lookvalidation" component={ UserLooksValidationComponent } />
           <Route path="/companies/everos/sendcv" component={ CompanyProfileComponent } />
           <Route path="/universities/fib/sendcv" component={ UniversityProfileComponent } />
+          <Route path="/universities/fib/smartcontract" component={ UniversityCanCreateSmartContractComponent } />
         </div>
       </BrowserRouter>
     );
