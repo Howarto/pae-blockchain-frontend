@@ -84,7 +84,6 @@ class Web3Wrapper {
         const transactions = [];
         for (const block of promisesValues) {
           if (block && block.transactions) {
-            debugger;
             block.transactions.forEach((elem) => {
               if (address1 === '*' || address1 === elem.from) {
                 if (address2 === elem.to) {
@@ -170,22 +169,33 @@ class Web3Wrapper {
       });
   }
 
-  runContractMethod(account, contractAbi, contractAddress, functionName, args = null, callback) {
+  runContractMethod(account, contractAbi, contractAddress, functionName, changeContractState, args = null, callback) {
     const myContract = new this.web3.eth.Contract(contractAbi, contractAddress);
 
     if (args) {
-      myContract.methods[functionName](args).send({ from: account })
-        .then(function () {
-          console.log('It runs!');
-        });
+      if (changeContractState) {
+        myContract.methods[functionName](args).send({ from: account })
+          .then(function () {
+            console.log('It runs!');
+          });
+      }
+      else {
+        myContract.methods[functionName](args).call({ from: account })
+          .then(function () {
+            console.log('It runs!');
+          });
+      }
     }
     else {
-      myContract.methods[functionName]().send({ from: account })
-        .then(callback);
+      if (changeContractState) {
+        myContract.methods[functionName]().send({ from: account })
+          .then(callback);
+      }
+      else {
+        myContract.methods[functionName]().call({ from: account })
+          .then(callback);
+      }
     }
-  }
-
-  getUserValidation(callback) {
   }
 }
 
