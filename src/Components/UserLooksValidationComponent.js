@@ -22,21 +22,23 @@ class UserLooksValidationComponent extends Component {
   }
 
   componentDidMount() {
-    const web3wrapper = new Web3Wrapper();
-    const userAccount = Globals.accounts.user;
-    web3wrapper.runContractMethod(
-      userAccount,
-      UserLooksValidationComponent.contractAbi,
-      UserLooksValidationComponent.contractAddress,
-      'isValidated',
-      false,
-      null,
-      function (result) {
-        if (result) {
-          this.setState({ verified: result });
-        }
-      }.bind(this)
-    );
+    if (UserLooksValidationComponent.contractAbi && UserLooksValidationComponent.contractAddress) {
+      const web3wrapper = new Web3Wrapper();
+      const userAccount = Globals.accounts.user;
+      web3wrapper.runContractMethod(
+        userAccount,
+        UserLooksValidationComponent.contractAbi,
+        UserLooksValidationComponent.contractAddress,
+        'isValidated',
+        false,
+        null,
+        function (result) {
+          if (result) {
+            this.setState({ verified: result });
+          }
+        }.bind(this)
+      );
+    }
   }
 
   /**
@@ -51,7 +53,7 @@ class UserLooksValidationComponent extends Component {
       <main role="main" className="container">
         <nav className="navbar navbar-default">
           <div className="container-fluid">
-            <p className="navbar-text">Signed in as Everos</p>
+            <p className="navbar-text">Signed in as Mery</p>
           </div>
         </nav>
 
