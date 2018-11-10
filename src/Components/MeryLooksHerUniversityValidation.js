@@ -4,7 +4,7 @@ import girlUser from '../girlUser.jpeg';
 import Web3Wrapper from '../Utils/Web3Wrapper';
 import Globals from '../Utils/Globals';
 
-class UserLooksValidationComponent extends Component {
+class MeryLooksHerUniversityValidation extends Component {
   /**
    * Component constructor.
    * @param {Object} props - Constructor properties.
@@ -22,13 +22,13 @@ class UserLooksValidationComponent extends Component {
   }
 
   componentDidMount() {
-    if (UserLooksValidationComponent.contractAbi && UserLooksValidationComponent.contractAddress) {
+    if (MeryLooksHerUniversityValidation.contractAbi && MeryLooksHerUniversityValidation.contractAddress) {
       const web3wrapper = new Web3Wrapper();
       const userAccount = Globals.accounts.user;
       web3wrapper.runContractMethod(
         userAccount,
-        UserLooksValidationComponent.contractAbi,
-        UserLooksValidationComponent.contractAddress,
+        MeryLooksHerUniversityValidation.contractAbi,
+        MeryLooksHerUniversityValidation.contractAddress,
         'isValidated',
         false,
         null,
@@ -147,7 +147,7 @@ class UserLooksValidationComponent extends Component {
     );
   }
 }
-UserLooksValidationComponent.contractAddress = null;
-UserLooksValidationComponent.contractAbi = null;
+MeryLooksHerUniversityValidation.contractAddress = null;
+MeryLooksHerUniversityValidation.contractAbi = null;
 
-export default UserLooksValidationComponent;
+export default MeryLooksHerUniversityValidation;

@@ -4,7 +4,7 @@ import girlUser from '../girlUser.jpeg';
 import Web3Wrapper from '../Utils/Web3Wrapper';
 import Globals from '../Utils/Globals';
 
-class ProfileViewer extends Component {
+class EverosCanLookCompleteCV extends Component {
   /**
    * Component constructor.
    * @param {Object} props - Constructor properties.
@@ -117,4 +117,4 @@ class ProfileViewer extends Component {
   }
 }
 
-export default ProfileViewer;
+export default EverosCanLookCompleteCV;

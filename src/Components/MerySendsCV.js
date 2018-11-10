@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import '../App.css';
-import fib from '../fib.jpg';
+import everos from '../everos.png';
 import Web3Wrapper from '../Utils/Web3Wrapper';
 import Globals from '../Utils/Globals';
 
-class UniversityProfileViewer extends Component {
+class MerySendsCV extends Component {
   /**
    * Component constructor.
    * @param {Object} props - Constructor properties.
@@ -12,18 +12,8 @@ class UniversityProfileViewer extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { buttonClicked: false, wasPaid: false };
+    this.state = { buttonClicked: false };
     this.handleClick = this.handleClick.bind(this);
-  }
-
-  componentDidMount() {
-    const web3wrapper = new Web3Wrapper();
-    web3wrapper.getAccountsTransactions(Globals.accounts.user, Globals.accounts.university,
-      function (transactions) {
-        if (transactions.length > 0) {
-          this.setState({ wasPaid: true });
-        }
-      }.bind(this));
   }
 
   /**
@@ -33,9 +23,9 @@ class UniversityProfileViewer extends Component {
     if (!this.state.buttonClicked) {
       // Change button state.
       this.setState({ buttonClicked: true });
-      // Send in blockchain a transaction to university account.
+      // Send in blockchain a transaction to the company account.
       const web3wrapper = new Web3Wrapper();
-      web3wrapper.sendMoney(Globals.accounts.user, Globals.accounts.university, '30');
+      web3wrapper.sendMoney(Globals.accounts.user, Globals.accounts.company, '5');
     }
   }
 
@@ -52,10 +42,10 @@ class UniversityProfileViewer extends Component {
           <div className="col">
             <div className="photo">
               <img
-                style={{ width: '400px', height: 'auto' }}
+                style={{ width: 'auto', height: '350px' }}
                 className="img-thumbnail rounded float-left"
-                src={fib}
-                alt="FIB-UPC"
+                src={everos}
+                alt="Everos"
               />
             </div>
           </div>
@@ -78,17 +68,13 @@ class UniversityProfileViewer extends Component {
           </div>
         </div>
 
-        { !this.state.wasPaid
-          && (
-            <div className="row">
-              <div className="col">
-                <div className="send-cv">
-                  <button onClick={this.handleClick}>Send personal data and fee</button>
-                </div>
-              </div>
+        <div className="row">
+          <div className="col">
+            <div className="send-cv">
+              <button onClick={this.handleClick}>Send CV</button>
             </div>
-          )
-        }
+          </div>
+        </div>
 
         {this.state.buttonClicked && (
           <div className="row">
@@ -104,4 +90,4 @@ class UniversityProfileViewer extends Component {
   }
 }
 
-export default UniversityProfileViewer;
+export default MerySendsCV;

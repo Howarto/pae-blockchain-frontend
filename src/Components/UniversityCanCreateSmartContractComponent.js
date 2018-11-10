@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 import Web3Wrapper from '../Utils/Web3Wrapper';
 import Globals from '../Utils/Globals';
-import UserLooksValidationComponent from './UserLooksValidationComponent';
+import MeryLooksHerUniversityValidation from './MeryLooksHerUniversityValidation';
 import fib from '../fib.jpg';
 
 class UniversityCanCreateSmartContractComponent extends Component {
@@ -21,8 +21,8 @@ class UniversityCanCreateSmartContractComponent extends Component {
     const web3wrapper = new Web3Wrapper();
     web3wrapper.runContractMethod(
       Globals.accounts.user,
-      UserLooksValidationComponent.contractAbi,
-      UserLooksValidationComponent.contractAddress,
+      MeryLooksHerUniversityValidation.contractAbi,
+      MeryLooksHerUniversityValidation.contractAddress,
       'passSubject',
       true,
       null,
@@ -37,8 +37,8 @@ class UniversityCanCreateSmartContractComponent extends Component {
     const web3wrapper = new Web3Wrapper();
     web3wrapper.deployContractUniversity(function (contractAddress, contractAbi) {
       console.log(`Contract deployed! at address ${contractAddress}`);
-      UserLooksValidationComponent.contractAddress = contractAddress;
-      UserLooksValidationComponent.contractAbi = contractAbi;
+      MeryLooksHerUniversityValidation.contractAddress = contractAddress;
+      MeryLooksHerUniversityValidation.contractAbi = contractAbi;
     }.bind(this));
   }
 
@@ -52,7 +52,7 @@ class UniversityCanCreateSmartContractComponent extends Component {
         </nav>
 
         <ul>
-          <li><Link to="/users/mery/lookvalidation">UserLooksValidationComponent</Link></li>
+          <li><Link to="/users/mery/lookvalidation">MeryLooksHerUniversityValidation</Link></li>
         </ul>
 
         <div className="row">
