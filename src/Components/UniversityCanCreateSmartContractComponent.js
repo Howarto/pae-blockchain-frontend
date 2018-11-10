@@ -68,10 +68,11 @@ class UniversityCanCreateSmartContractComponent extends Component {
           </div>
         </div>
 
-        <div style={{backgroundColor: 'palevioletred'}}>
+        <div style={{ backgroundColor: 'palevioletred' }}>
           <h3>Mery send you a enrolment request</h3>
           <button onClick={ this.handleClickCreateSmartContract } >Create smart contract</button>
-          <button onClick={ this.handleClickPassedSubject } >The student pass one subject more!</button>
+          <button onClick={this.handleClickPassedSubject} >
+            The student pass one subject more!</button>
         </div>
 
         <div className="row">
