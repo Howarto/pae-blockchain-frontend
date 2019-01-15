@@ -4,7 +4,7 @@ import checkSVG from '../check.svg';
 import Web3Wrapper from '../Utils/Web3Wrapper';
 import Globals from '../Utils/Globals';
 
-class EverosCanLookCompleteCV extends Component {
+class BayerCanLookCompleteCV extends Component {
   /**
    * Component constructor.
    * @param {Object} props - Constructor properties.
@@ -42,7 +42,7 @@ class EverosCanLookCompleteCV extends Component {
     return <main role="main" className="container">
       <nav className="navbar navbar-default">
         <div className="container-fluid">
-          <p className="navbar-text">Signed in as <b>Everos</b></p>
+          <p className="navbar-text">Signed in as <b>Bayer</b></p>
         </div>
       </nav>
       <div className="wrapper">
@@ -111,4 +111,4 @@ class EverosCanLookCompleteCV extends Component {
   }
 }
 
-export default EverosCanLookCompleteCV;
+export default BayerCanLookCompleteCV;

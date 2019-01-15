@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
-import everos from '../everos.png';
+import bayer from '../bayer.png';
 import Web3Wrapper from '../Utils/Web3Wrapper';
 import Globals from '../Utils/Globals';
 
@@ -38,16 +38,18 @@ class MerySendsCV extends Component {
       <main role="main" className="container">
         <nav className="navbar navbar-default">
           <div className="container-fluid">
-            <p className="navbar-text">Signed in as <b>Mery</b></p>
+            <p className="navbar-text">
+              Signed in as <b>Mery</b>
+            </p>
           </div>
         </nav>
-        <div className="wrapper everos">
+        <div className="wrapper bayer">
           <div className="profile-card js-profile-card">
             <div className="profile-card__img">
-              <img src={everos} alt="profile card" />
+              <img src={bayer} alt="profile card" />
             </div>
             <div className="profile-card__cnt js-profile-cnt">
-              <div className="profile-card__name">EVEROS</div>
+              <div className="profile-card__name">Bayer</div>
               <div className="profile-card__txt">
                 <strong>Consultoría multinacional</strong>
               </div>
@@ -55,23 +57,30 @@ class MerySendsCV extends Component {
               <div className="profile-card_txt">
                 <div className="profile-card-inf__item">
                   <div className="profile-card-inf__txt">
-                    Everos Outsourcing es la unidad de negocio de everos que se
-                    encarga de prestar servicios de Gestión de Aplicaciones e
-                    Infraestructuras a clientes de primer nivel dentro de un
-                    amplio campo de sectores: telecomunicaciones, banca,
-                    seguros, energía, industria y sector público. En el ámbito
-                    de Gestión de Aplicaciones de la unidad de Outsourcing
-                    ponemos a disposición de nuestros clientes soluciones de
-                    Mantenimiento y Evolución de aplicaciones con orientación
-                    hacia la mejora continua, en una relación de asociación a
-                    largo plazo para alcanzar sus objetivos estratégicos de
-                    negocio.
+                    Bayer is a global enterprise with core competencies in the
+                    Life Science fields of health care and agriculture. Our
+                    products and services are designed to benefit people and
+                    improve their quality of life. At the same time, we aim to
+                    create value through innovation, growth and high earning
+                    power. Our products help address some of today’s biggest
+                    challenges, including global population growth, an aging
+                    society and the need to make efficient – and, wherever
+                    possible, sustainable – use of natural resources. In line
+                    with our mission “Bayer: Science For A Better Life,” we aim
+                    to improve people’s quality of life by preventing,
+                    alleviating or curing diseases. We also help provide an
+                    adequate supply of high-quality food, feed and renewable
+                    plant-based raw materials. For these endeavors, we focus on
+                    developing and successfully commercializing innovative
+                    products and solutions based on scientific knowledge.
                   </div>
                 </div>
                 <div className="row">
                   <div className="col">
                     <div className="send-cv">
-                      <button onClick={this.handleClick}>Send CV</button>
+                      <button onClick={this.handleClick}>
+                        <b>Send CV</b>
+                      </button>
                     </div>
                   </div>
                 </div>

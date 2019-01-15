@@ -88,7 +88,7 @@ class MeryLooksHerUniversityValidation extends Component {
             <div className="col">
               <div className="aptitudes">
                 <h3>
-                  This user had been verified by FIB
+                  This user had been verified by FIB <img width="22px" height="22px" src={checkSVG} />
                 </h3>
               </div>
             </div>

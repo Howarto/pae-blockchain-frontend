@@ -13,7 +13,7 @@ The main objective of this project is demonstrate that it's possible the main tw
 
 ## First Case: Identity pays to other to show its CV (if it's a person) or pays to look person's CV (if it's a company)
 To simulate this case you have to do the next steps:
-1. Go to http://localhost:3000/companies/everos/sendcv and press the button _Send CV_
+1. Go to http://localhost:3000/companies/bayer/sendcv and press the button _Send CV_
 2. Go to http://localhost:3000/users/mery/lookcv and look that there is a message explaining that there are aptitudes of the complete CV.
 
 ## Second Case: University has received user's fee transaction, create smart contract and interact with it.
