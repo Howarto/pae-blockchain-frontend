@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
-import fib from '../fib.jpg';
+import fib from '../facu_quimica.jpg';
 import Web3Wrapper from '../Utils/Web3Wrapper';
 import Globals from '../Utils/Globals';
 
@@ -51,7 +51,7 @@ class MerySendsFeeToUniversity extends Component {
       <main role="main" className="container">
         <nav className="navbar navbar-default">
           <div className="container-fluid">
-            <p className="navbar-text">Signed in as Mery</p>
+            <p className="navbar-text">Signed in as <b>Edu</b></p>
           </div>
         </nav>
 
@@ -71,21 +71,19 @@ class MerySendsFeeToUniversity extends Component {
         <div className="row">
           <div className="col">
             <div className="summary">
-              Bayer is a global enterprise with core competencies in the Life
-              Science fields of health care and agriculture. Our products and
-              services are designed to benefit people and improve their quality
-              of life. At the same time, we aim to create value through
-              innovation, growth and high earning power. Our products help
-              address some of today’s biggest challenges, including global
-              population growth, an aging society and the need to make efficient
-              – and, wherever possible, sustainable – use of natural resources.
-              In line with our mission “Bayer: Science For A Better Life,” we
-              aim to improve people’s quality of life by preventing, alleviating
-              or curing diseases. We also help provide an adequate supply of
-              high-quality food, feed and renewable plant-based raw materials.
-              For these endeavors, we focus on developing and successfully
-              commercializing innovative products and solutions based on
-              scientific knowledge.
+              La Facultad de Química imparte desde hace años los estudios de
+              Química, de Ingeniería Química y de Ingeniería de Materiales, con
+              una amplia experiencia y tradición, y con la mejor calidad
+              docente, sobradamente reconocida. Los titulados y profesionales
+              del sector químico, tanto licenciados recientes como personal de
+              empresas o de instituciones públicas o privadas, también pueden
+              completar la formación mediante cursos de posgrado y de extensión
+              universitaria, másteres y doctorados. La Facultad participa en
+              proyectos de investigación nacionales e internacionales, con una
+              movilidad considerable de conocimientos, profesorado y
+              estudiantes. Con estos proyectos, se alcanza una producción
+              científica muy elevada, que justifica la calidad reconocida de la
+              investigación de la Facultad.{' '}
             </div>
           </div>
         </div>
@@ -94,7 +92,10 @@ class MerySendsFeeToUniversity extends Component {
           <div className="row">
             <div className="col">
               <div className="send-cv">
-                <button onClick={this.handleClick}>
+                <button
+                  style={{ background: 'lightgray' }}
+                  onClick={this.handleClick}
+                >
                   Send personal data and fee
                 </button>
               </div>

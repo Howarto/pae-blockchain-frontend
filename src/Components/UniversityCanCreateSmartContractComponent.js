@@ -4,7 +4,7 @@ import '../App.css';
 import Web3Wrapper from '../Utils/Web3Wrapper';
 import Globals from '../Utils/Globals';
 import MeryLooksHerUniversityValidation from './MeryLooksHerUniversityValidation';
-import fib from '../fib.jpg';
+import fib from '../facu_quimica.jpg';
 
 class UniversityCanCreateSmartContractComponent extends Component {
   constructor(props) {
@@ -62,14 +62,14 @@ class UniversityCanCreateSmartContractComponent extends Component {
         <ul>
           <li>
             <Link to="/users/mery/lookvalidation">
-              MeryLooksHerUniversityValidation
+              Look Edu's profile as Bayer
             </Link>
           </li>
         </ul>
         <nav className="navbar navbar-default">
           <div className="container-fluid">
             <p className="navbar-text">
-              Signed in as <b>FIB</b>
+              Signed in as <b>UB: Facultat de química</b>
             </p>
           </div>
         </nav>
@@ -79,7 +79,7 @@ class UniversityCanCreateSmartContractComponent extends Component {
               <img src={fib} alt="profile card" />
             </div>
             <div className="profile-card__cnt js-profile-cnt">
-              <div className="profile-card__name">FIB</div>
+              <div className="profile-card__name">UB: Facultat de Química</div>
               <div className="profile-card__txt">
                 <strong>Universidad</strong>
               </div>
@@ -87,17 +87,24 @@ class UniversityCanCreateSmartContractComponent extends Component {
               <div className="profile-card_txt">
                 <div className="profile-card-inf__item">
                   <div className="profile-card-inf__txt">
-                    La Facultat d'Informàtica de Barcelona es el centro de
-                    referencia en los estudios de informática desde su creación
-                    en 1976 y el inicio de las actividades docentes el curso
-                    1977/78. Durante estos 40 años ha impartido los estudios de
-                    licenciatura, diplomatura, ingeniería técnica y superior y
-                    actualmente grados y másteres, las titulaciones oficiales en
-                    el campo de la Informática y materias afines.
+                    La Facultad de Química imparte desde hace años los estudios
+                    de Química, de Ingeniería Química y de Ingeniería de
+                    Materiales, con una amplia experiencia y tradición, y con la
+                    mejor calidad docente, sobradamente reconocida. Los
+                    titulados y profesionales del sector químico, tanto
+                    licenciados recientes como personal de empresas o de
+                    instituciones públicas o privadas, también pueden completar
+                    la formación mediante cursos de posgrado y de extensión
+                    universitaria, másteres y doctorados. La Facultad participa
+                    en proyectos de investigación nacionales e internacionales,
+                    con una movilidad considerable de conocimientos, profesorado
+                    y estudiantes. Con estos proyectos, se alcanza una
+                    producción científica muy elevada, que justifica la calidad
+                    reconocida de la investigación de la Facultad.
                   </div>
                 </div>
                 <div style={{ backgroundColor: 'palevioletred' }}>
-                  <h3>Mery send you a enrolment request</h3>
+                  <h3>Edu sent you a enrolment request</h3>
                   <button onClick={this.handleClickCreateForm}>
                     <b>Create smart contract</b>
                   </button>
@@ -108,98 +115,102 @@ class UniversityCanCreateSmartContractComponent extends Component {
                 </div>
               </div>
             </div>
-            { this.state.formCreation &&
-              <div style={{ margin: '0px 100px 0px 100px' }} className="wrap-contact100">
-                  <span className="contact100-form-title">Formulario de inscripción</span>
+            {this.state.formCreation && (
+              <div
+                style={{ margin: '0px 100px 0px 100px' }}
+                className="wrap-contact100"
+              >
+                <span className="contact100-form-title">
+                  Formulario de inscripción
+                </span>
 
-                  <div
-                    className="wrap-input100 validate-input"
-                    data-validate="Name is required"
-                  >
-                    <span className="label-input100">Nombre del estudiante</span>
-                    <input
-                      className="input100"
-                      type="text"
-                      name="name"
-                      placeholder="Enter your name"
-                    />
-                    <span className="focus-input100" />
-                  </div>
+                <div
+                  className="wrap-input100 validate-input"
+                  data-validate="Name is required"
+                >
+                  <span className="label-input100">Nombre del estudiante</span>
+                  <input
+                    className="input100"
+                    type="text"
+                    name="name"
+                    placeholder="Enter your name"
+                  />
+                  <span className="focus-input100" />
+                </div>
 
-                  <div
-                    className="wrap-input100 validate-input"
-                    data-validate="Valid email is required: ex@abc.xyz"
-                  >
-                    <span className="label-input100">Email</span>
-                    <input
-                      className="input100"
-                      type="text"
-                      name="email"
-                      placeholder="Enter your email addess"
-                    />
-                    <span className="focus-input100" />
-                  </div>
+                <div
+                  className="wrap-input100 validate-input"
+                  data-validate="Valid email is required: ex@abc.xyz"
+                >
+                  <span className="label-input100">Email</span>
+                  <input
+                    className="input100"
+                    type="text"
+                    name="email"
+                    placeholder="Enter your email addess"
+                  />
+                  <span className="focus-input100" />
+                </div>
 
-                  <div className="wrap-input100 input100-select">
-                    <span className="label-input100">Estudios</span>
-                    <div>
-                      <select className="selection-2" name="estudios">
-                        <option>Elija un estudio</option>
-                        <option>Fisioterapia</option>
-                        <option>Marketing</option>
-                        <option>eCommerce Bussiness</option>
-                        <option>Diseño UI/UX</option>
-                        <option>Informática</option>
-                      </select>
-                    </div>
-                    <span className="focus-input100" />
+                <div className="wrap-input100 input100-select">
+                  <span className="label-input100">Estudios</span>
+                  <div>
+                    <select className="selection-2" name="estudios">
+                      <option>Química</option>
+                    </select>
                   </div>
+                  <span className="focus-input100" />
+                </div>
 
-                  <div className="wrap-input100 input100-select">
-                    <span className="label-input100">Descuentos del estado aplicables</span>
-                    <div>
-                      <select className="selection-2" name="descuento">
-                        <option>Selecciona descuento</option>
-                        <option>100% Matrícula de honor</option>
-                        <option>70% Família numerosa</option>
-                        <option>10% Residente</option>
-                      </select>
-                    </div>
-                    <span className="focus-input100" />
+                <div className="wrap-input100 input100-select">
+                  <span className="label-input100">
+                    Descuentos del estado aplicables
+                  </span>
+                  <div>
+                    <select className="selection-2" name="descuento">
+                      <option>Selecciona descuento</option>
+                      <option>100% Matrícula de honor</option>
+                      <option>70% Família numerosa</option>
+                      <option>10% Residente</option>
+                    </select>
                   </div>
+                  <span className="focus-input100" />
+                </div>
 
-                  <div
-                    className="wrap-input100 validate-input"
-                    data-validate="Message is required"
-                  >
-                    <span className="label-input100">Condición de aprobado</span>
-                    <textarea
-                      className="input100"
-                      name="message"
-                      placeholder="Condición de aprobado..."
-                    />
-                    <span className="focus-input100" />
-                  </div>
+                <div
+                  className="wrap-input100 validate-input"
+                  data-validate="Message is required"
+                >
+                  <span className="label-input100">Condición de aprobado</span>
+                  <textarea
+                    className="input100"
+                    name="message"
+                    placeholder="Condición de aprobado..."
+                  />
+                  <span className="focus-input100" />
+                </div>
 
-                  <div className="container-contact100-form-btn">
-                    <div className="wrap-contact100-form-btn">
-                      <div className="contact100-form-bgbtn" />
-                      <button onClick={ this.handleClickCreateSmartContract } className="contact100-form-btn">
-                        <span>
-                          Submit
-                          <i
-                            className="fa fa-long-arrow-right m-l-7"
-                            aria-hidden="true"
-                          />
-                        </span>
-                      </button>
-                    </div>
+                <div className="container-contact100-form-btn">
+                  <div className="wrap-contact100-form-btn">
+                    <div className="contact100-form-bgbtn" />
+                    <button
+                      onClick={this.handleClickCreateSmartContract}
+                      className="contact100-form-btn"
+                    >
+                      <span>
+                        Submit
+                        <i
+                          className="fa fa-long-arrow-right m-l-7"
+                          aria-hidden="true"
+                        />
+                      </span>
+                    </button>
                   </div>
+                </div>
               </div>
-            }
+            )}
           </div>
         </div>
-
       </main>
     );
   }
