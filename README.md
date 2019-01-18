@@ -1,5 +1,12 @@
 UPC-FIB-PAE Project 2018-2019 Q1
 
+# Authors
+
+Diego Lao
+Clara Picazo
+Andreu Feliu
+Manel Fernández
+
 # Why this project?
 PAE is a subject from FIB(Facultat d'informàtica de Barcelona) that wants to teach to students abilities to create and sell ideas.
 
